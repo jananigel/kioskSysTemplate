@@ -1,0 +1,10 @@
+!!!5
+%html
+	%head
+		= Haml::Engine.new(File.read('src/home/_head.html.haml')).render
+	%body
+		.main
+			.info
+				您已完成訂房手續
+			.checkBtn
+				%a.checkin(href="index.html") 完成

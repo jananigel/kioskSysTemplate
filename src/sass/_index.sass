@@ -1,0 +1,31 @@
+@mixin buttonColor($backgroundColor, $borderColor)
+    background: $backgroundColor
+    border: 1px solid $borderColor
+    
+.main
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    
+.checkBtn
+    flex-direction: column
+    display: flex
+    padding: 1rem 3rem
+    box-shadow: 1px 1px 2px 0 #c9c9c9
+    background: white
+
+.checkBtn
+    a
+        cursor: pointer
+        margin: 1rem
+        padding: 1rem 2rem
+        color: black
+
+.checkin
+    +buttonColor(#95e498, #339880)
+
+.checkout
+    +buttonColor(#ff7f7f, #ff007f)
+

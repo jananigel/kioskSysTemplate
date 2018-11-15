@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<title>Kiosk</title>
+<!-- %link(rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png") -->
+<!-- %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png") -->
+<!-- %link(rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png") -->
+<!-- %link(rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png") -->
+<link href='img/favicon.png' rel='shortcut icon'>
+<script src='./js/main.js'></script>
+<link href='./css/styles.min.css' rel='stylesheet'>
+
+</head>
+<body onload='bookRoom();'>
+<div class='main'>
+<div class='info'>
+<div class='row'>
+<span>Hotel:</span>
+<input disabled id='hotelId'>
+</div>
+<div class='row'>
+<span>Machine:</span>
+<input disabled id='machineId'>
+</div>
+<div class='row'>
+<span>Room Type:</span>
+<input disabled id='roomType'>
+</div>
+<div class='row'>
+<span>Room No.:</span>
+<input disabled id='roomNo'>
+</div>
+<hr>
+<div class='btn'>
+<a class='btn confirm' href='checkin.html?' id='confirmBtn'>押房</a>
+<a class='btn release' id='releaseBtn' onclick='window.history.back();'>釋放</a>
+</div>
+</div>
+</div>
+</body>
+</html>

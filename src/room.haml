@@ -1,0 +1,7 @@
+!!!5
+%html
+  %head
+    = Haml::Engine.new(File.read('src/home/_head.html.haml')).render
+    -# %script(src = "./js/room.js")
+  %body(onload="getRoom()")
+    .main

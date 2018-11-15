@@ -1,0 +1,25 @@
+!!!5
+%html
+	%head
+		= Haml::Engine.new(File.read('src/home/_head.html.haml')).render
+	%body(onload="bookRoom();")
+		.main
+			.info
+				.row
+					%span Hotel: 
+					%input(id="hotelId" disabled)
+				.row
+					%span Machine: 
+					%input(id="machineId" disabled)
+				.row
+					%span Room Type: 
+					%input(id="roomType" disabled)
+				.row
+					%span Room No.:
+					%input(id="roomNo" disabled)
+				%hr
+				.btn
+					%a.btn.confirm#confirmBtn(href="checkin.html?") 押房
+					%a.btn.release#releaseBtn(onclick="window.history.back();") 釋放
+			
+        

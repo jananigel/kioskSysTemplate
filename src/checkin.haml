@@ -1,0 +1,123 @@
+!!!5
+%html
+	%head
+		= Haml::Engine.new(File.read('src/home/_head.html.haml')).render
+	%body
+		%form.main(id="infoForm" method="GET")
+			%table
+				%tbody
+					%tr
+						%td 飯店代號
+						%td
+							%input(name="hotelid" value="KCSYS")
+						%td 機台代號
+						%td
+							%input(name="machineid" value="K01")
+					%tr
+						%td 訂房單號
+						%td
+							%input(name="rsvno" value="A17123557")
+						%td OTA單號
+						%td
+							%input(name="otano" value="TSC-05504")
+					%tr
+						%td 入住驗證碼
+						%td
+							%input(name="authkey" value="BQ17")
+						%td 房型代號
+						%td
+							%input(name="rmtype" value="SS")
+					%tr
+						%td 房間號碼
+						%td
+							%input(name="rmno" value="1003")
+						%td 住宿期間房價總金額
+						%td
+							%input(type="number" min="0" name="totamt" value="2000")
+					%tr
+						%td 已付訂金金額
+						%td
+							%input(type="number" min="0" name="deposit" value="0")
+						%td 入住日期
+						%td
+							%input(type="date" name="arrdt" value="2019-01-01")
+					%tr
+						%td 離開日期
+						%td
+							%input(type="date" name="depdt" value="2020-01-01")
+						%td 住宿天數
+						%td
+							%input(type="number" min="0" name="rmngt" value="365")
+					%tr
+						%td 住客姓名
+						%td
+							%input(name="name" value="User")
+						%td 住客電話
+						%td
+							%input(name="tel" value="02-2177-5463")
+					%tr
+						%td 住客行動電話
+						%td
+							%input(name="mobile" value="0912-345-678")
+						%td 性別
+						%td
+							%label
+								%input(type="radio" name="sex" value="0" checked)
+								%span 男
+							%label
+								%input(type="radio" name="sex" value="1")
+								%span 女
+					%tr
+						%td 出生年月日
+						%td
+							%input(type="date" name="birth" value="1999-10-10")
+						%td 證件號碼
+						%td
+							%input(name="idno" value="A123456789")
+					%tr
+						%td 國籍
+						%td
+							%input(name="orig" value="Taiwan")
+						%td 地址
+						%td
+							%input(name="address" value="台北市內湖區基湖路18號")
+					%tr
+						%td 付款代碼
+						%td
+							%input(name="payid" value="123-456-789")
+						%td 付款名稱
+						%td
+							%input(name="payname" value="1200")
+					%tr
+						%td 付款金額
+						%td
+							%input(type="number" min="0" name="payamt" value="0")
+						%td 信用卡號
+						%td
+							%input(name="payrefno1" value="123-777-888-999-111")
+					%tr
+						%td 信用卡別
+						%td
+							%input(name="payrefno2" value="N/A")
+						%td 信用卡有效日
+						%td
+							%input(type="date" name="payrefno3" value="2020-01-01")
+					%tr
+						%td 信用卡授權碼
+						%td
+							%input(name="payrefno4" value="z7895a99ad3874")
+						%td 線上金流單號
+						%td
+							%input(name="payrefno5" value="12-44-85-666")
+					%tr
+						%td(colspan="4" ) 其他說明
+					%tr
+						%td(colspan="4")
+							%textarea(row="4" name="remark" value="N/A")
+			%hr
+			.btn
+				%a.btn.confirm#confirmBtn(type="submit" onclick="onChangeClick();") 訂房轉入住
+				%a.btn.confirm#confirmBtn(type="submit" onclick="onCheckInClick();") 訂房
+				%a.btn.release#releaseBtn(onclick="window.history.back();") 取消
+			
+        

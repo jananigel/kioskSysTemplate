@@ -1,0 +1,13 @@
+{
+  "boss":      true,
+  "node":      true,
+  "eqeqeq":    true,
+  "strict":    false,
+  "newcap":    false,
+  "undef":     true,
+  "unused":    true,
+  "onecase":   true,
+  "lastsemic": true,
+  "esversion": 6,
+  "browser" : true
+}

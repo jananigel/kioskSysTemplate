@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<title>Kiosk</title>
+<!-- %link(rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png") -->
+<!-- %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png") -->
+<!-- %link(rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png") -->
+<!-- %link(rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png") -->
+<link href='img/favicon.png' rel='shortcut icon'>
+<script src='./js/main.js'></script>
+<link href='./css/styles.min.css' rel='stylesheet'>
+
+</head>
+<body>
+<form class='main' id='infoForm' method='GET'>
+<table>
+<tbody>
+<tr>
+<td>飯店代號</td>
+<td>
+<input name='hotelid' value='KCSYS'>
+</td>
+<td>機台代號</td>
+<td>
+<input name='machineid' value='K01'>
+</td>
+</tr>
+<tr>
+<td>訂房單號</td>
+<td>
+<input name='rsvno' value='A17123557'>
+</td>
+<td>OTA單號</td>
+<td>
+<input name='otano' value='TSC-05504'>
+</td>
+</tr>
+<tr>
+<td>入住驗證碼</td>
+<td>
+<input name='authkey' value='BQ17'>
+</td>
+<td>房型代號</td>
+<td>
+<input name='rmtype' value='SS'>
+</td>
+</tr>
+<tr>
+<td>房間號碼</td>
+<td>
+<input name='rmno' value='1003'>
+</td>
+<td>住宿期間房價總金額</td>
+<td>
+<input min='0' name='totamt' type='number' value='2000'>
+</td>
+</tr>
+<tr>
+<td>已付訂金金額</td>
+<td>
+<input min='0' name='deposit' type='number' value='0'>
+</td>
+<td>入住日期</td>
+<td>
+<input name='arrdt' type='date' value='2019-01-01'>
+</td>
+</tr>
+<tr>
+<td>離開日期</td>
+<td>
+<input name='depdt' type='date' value='2020-01-01'>
+</td>
+<td>住宿天數</td>
+<td>
+<input min='0' name='rmngt' type='number' value='365'>
+</td>
+</tr>
+<tr>
+<td>住客姓名</td>
+<td>
+<input name='name' value='User'>
+</td>
+<td>住客電話</td>
+<td>
+<input name='tel' value='02-2177-5463'>
+</td>
+</tr>
+<tr>
+<td>住客行動電話</td>
+<td>
+<input name='mobile' value='0912-345-678'>
+</td>
+<td>性別</td>
+<td>
+<label>
+<input checked name='sex' type='radio' value='0'>
+<span>男</span>
+</label>
+<label>
+<input name='sex' type='radio' value='1'>
+<span>女</span>
+</label>
+</td>
+</tr>
+<tr>
+<td>出生年月日</td>
+<td>
+<input name='birth' type='date' value='1999-10-10'>
+</td>
+<td>證件號碼</td>
+<td>
+<input name='idno' value='A123456789'>
+</td>
+</tr>
+<tr>
+<td>國籍</td>
+<td>
+<input name='orig' value='Taiwan'>
+</td>
+<td>地址</td>
+<td>
+<input name='address' value='台北市內湖區基湖路18號'>
+</td>
+</tr>
+<tr>
+<td>付款代碼</td>
+<td>
+<input name='payid' value='123-456-789'>
+</td>
+<td>付款名稱</td>
+<td>
+<input name='payname' value='1200'>
+</td>
+</tr>
+<tr>
+<td>付款金額</td>
+<td>
+<input min='0' name='payamt' type='number' value='0'>
+</td>
+<td>信用卡號</td>
+<td>
+<input name='payrefno1' value='123-777-888-999-111'>
+</td>
+</tr>
+<tr>
+<td>信用卡別</td>
+<td>
+<input name='payrefno2' value='N/A'>
+</td>
+<td>信用卡有效日</td>
+<td>
+<input name='payrefno3' type='date' value='2020-01-01'>
+</td>
+</tr>
+<tr>
+<td>信用卡授權碼</td>
+<td>
+<input name='payrefno4' value='z7895a99ad3874'>
+</td>
+<td>線上金流單號</td>
+<td>
+<input name='payrefno5' value='12-44-85-666'>
+</td>
+</tr>
+<tr>
+<td colspan='4'>其他說明</td>
+</tr>
+<tr>
+<td colspan='4'>
+<textarea name='remark' row='4' value='N/A'></textarea>
+</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class='btn'>
+<a class='btn confirm' id='confirmBtn' onclick='onChangeClick();' type='submit'>訂房轉入住</a>
+<a class='btn confirm' id='confirmBtn' onclick='onCheckInClick();' type='submit'>訂房</a>
+<a class='btn release' id='releaseBtn' onclick='window.history.back();'>取消</a>
+</div>
+</form>
+</body>
+</html>

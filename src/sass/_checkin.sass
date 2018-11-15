@@ -1,0 +1,27 @@
+@mixin buttonColor($bgColor, $borderColor)
+    background: $bgColor
+    border: 1px solid $borderColor
+
+table
+    background: white
+    margin: 1rem 0
+    tr td 
+        border: 1px solid #888888
+        padding: .5rem 1rem
+        input:not([type="radio"]), textarea
+            width: 100%
+    tr td:nth-child(odd)
+        font-weight: bold
+
+.btn
+    a 
+        cursor: pointer
+        margin: 0 1rem
+        min-width: 90px
+        padding: .5rem 1rem
+    a:nth-child(1)
+        +buttonColor(#b4dfff, #88ccff)
+    a:nth-child(2)
+        +buttonColor(#ffbd92, #d4824c)
+    a:nth-child(3)
+        +buttonColor(#ff7f7f, #ff007f)
