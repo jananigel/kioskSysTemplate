@@ -110,51 +110,15 @@
 						%td
 							%input(name="payrefno5" value="12-44-85-666")
 					%tr
-						%td 開出發票號碼
-						%td
-							%input(name="receipt" value="47882341")
-						%td 開出發票統編
-						%td
-							%input(name="receiptNo" value="A123456789")
+						%td(colspan="4" ) 其他說明
 					%tr
-						%td 開出發票金額
-						%td
-							%input(type="number" name="receiptPrice" value="2000")
-						%td 電子發票隨機碼
-						%td
-							%input(name="receiptRandomNo" value="44852662154")
-					%tr
-						%td 電子發票載具類別
-						%td
-							%input(name="receiptType" value="AS")
-						%td 電子發票載具號碼
-						%td
-							%input(name="receiptMachineNo" value="1200")
-					%tr
-						%td 電子發票愛心碼
-						%td
-							%input(name="receiptGoodHeartNo" value="11478955")
-						%td 電子發票捐贈對象
-						%td
-							%input(name="receiptDonate" value="N/A")
-					%tr
-						%td 第一張房卡號
-						%td
-							%input(name="roomCardNo" value="Room card 1")
-						%td 第二張房卡號
-						%td
-							%input(name="roomCardNo" value="Room card 2")
-					%tr
-						%td 證件檔名1
-						%td
-							%input(name="fileName1" value="File name 1")
-						%td 證件檔名2
-						%td
-							%input(name="fileName2" value="File name 2")
+						%td(colspan="4")
+							%textarea(row="4" name="remark" value="N/A")
 			%hr
 			.btn
-				-# %a.btn.confirm#confirmBtn(type="submit" onclick="onConfirmClick();") 確認
-				%a.btn.confirm#confirmBtn(href="checkinConfirm.html") 確認
+				-# %a.btn.confirm#confirmBtn(type="submit" onclick="onChangeClick();") 訂房轉入住
+				%a.btn.confirm#confirmBtn(href="checkin.html") 訂房轉入住
+				%a.btn.confirm#confirmBtn(type="submit" onclick="onCheckInClick();") 訂房
 				%a.btn.release#releaseBtn(onclick="window.history.back();") 取消
 			
         

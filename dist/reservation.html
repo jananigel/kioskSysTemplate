@@ -166,70 +166,19 @@
 </td>
 </tr>
 <tr>
-<td>開出發票號碼</td>
-<td>
-<input name='receipt' value='47882341'>
-</td>
-<td>開出發票統編</td>
-<td>
-<input name='receiptNo' value='A123456789'>
-</td>
+<td colspan='4'>其他說明</td>
 </tr>
 <tr>
-<td>開出發票金額</td>
-<td>
-<input name='receiptPrice' type='number' value='2000'>
-</td>
-<td>電子發票隨機碼</td>
-<td>
-<input name='receiptRandomNo' value='44852662154'>
-</td>
-</tr>
-<tr>
-<td>電子發票載具類別</td>
-<td>
-<input name='receiptType' value='AS'>
-</td>
-<td>電子發票載具號碼</td>
-<td>
-<input name='receiptMachineNo' value='1200'>
-</td>
-</tr>
-<tr>
-<td>電子發票愛心碼</td>
-<td>
-<input name='receiptGoodHeartNo' value='11478955'>
-</td>
-<td>電子發票捐贈對象</td>
-<td>
-<input name='receiptDonate' value='N/A'>
-</td>
-</tr>
-<tr>
-<td>第一張房卡號</td>
-<td>
-<input name='roomCardNo' value='Room card 1'>
-</td>
-<td>第二張房卡號</td>
-<td>
-<input name='roomCardNo' value='Room card 2'>
-</td>
-</tr>
-<tr>
-<td>證件檔名1</td>
-<td>
-<input name='fileName1' value='File name 1'>
-</td>
-<td>證件檔名2</td>
-<td>
-<input name='fileName2' value='File name 2'>
+<td colspan='4'>
+<textarea name='remark' row='4' value='N/A'></textarea>
 </td>
 </tr>
 </tbody>
 </table>
 <hr>
 <div class='btn'>
-<a class='btn confirm' href='checkinConfirm.html' id='confirmBtn'>確認</a>
+<a class='btn confirm' href='checkin.html' id='confirmBtn'>訂房轉入住</a>
+<a class='btn confirm' id='confirmBtn' onclick='onCheckInClick();' type='submit'>訂房</a>
 <a class='btn release' id='releaseBtn' onclick='window.history.back();'>取消</a>
 </div>
 </form>

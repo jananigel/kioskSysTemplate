@@ -1,0 +1,9 @@
+!!!5
+%html
+  %head
+    = Haml::Engine.new(File.read('src/home/_head.html.haml')).render
+  %body
+    .main
+      .checkBtn
+        %a.checkin(href="roomType.html?hotelid=KCSYS&machineid=K01&days=5") 未訂房
+        %a.checkout(href="checkin.html") 轉入住

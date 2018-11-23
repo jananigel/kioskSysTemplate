@@ -1,0 +1,24 @@
+!!!5
+%html
+	%head
+		= Haml::Engine.new(File.read('src/home/_head.html.haml')).render
+	%body()
+		.main
+			.info
+				.row
+					%span 飯店代號： 
+					%input(id="hotelId" disabled value="KCSYS")
+				.row
+					%span 機台代號： 
+					%input(id="machineId" disabled value="K01")
+				.row
+					%span 訂房單號：
+					%input(id="roomNo")
+				.row
+					%span 訂房單序號：
+					%input(id="roomSerial")
+				%hr
+				.btn
+					%a.btn.confirm#confirmBtn(onclick="checkout();") 退房
+					%a.btn.release#releaseBtn(onclick="window.history.back();") 取消			
+        
