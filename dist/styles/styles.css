@@ -12,6 +12,10 @@ table {
   border-spacing: 0;
 }
 
+hr {
+  margin: 0.5rem 0;
+}
+
 ::-moz-selection {
   background: #05437A;
   color: white;
@@ -38,6 +42,9 @@ table {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
 }
 
 .checkBtn {
@@ -48,6 +55,8 @@ table {
   padding: 1rem 3rem;
   box-shadow: 1px 1px 2px 0 #c9c9c9;
   background: white;
+  -ms-flex: none;
+      flex: none;
 }
 
 .checkBtn a {
@@ -69,11 +78,10 @@ table {
 
 .roomTypeList {
   margin: 0 0 2rem 0;
-  width: 50%;
+  width: 70%;
 }
 
 a.roomType {
-  width: 100%;
   box-shadow: 1px 1px 2px 0 #c9c9c9;
   padding: 0.5rem 1.5rem;
   display: block;
